@@ -1,0 +1,1 @@
+enum MECAuthenticationStatus { unknown, authenticated, unauthenticated, session_expired }
