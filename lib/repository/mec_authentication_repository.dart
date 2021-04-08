@@ -17,7 +17,6 @@ class MECAuthenticationRepository {
 
   ///Log-in
   /// @phone : phone number
-  /// @token : social third party token
   Future<MECResponse<MECUserModel>> login(String phone, String token) async {
     Future.delayed(Duration(seconds: 1));
     return MECResponse(code: MECResponseCode.SUCCESS, data: MECUserModel(), message: "");
