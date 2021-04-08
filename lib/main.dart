@@ -5,6 +5,7 @@ import 'package:flutter_app_interview/bloc/bloc_factory.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/authen_wrapper.dart';
 import 'package:flutter_app_interview/ui/pages/home_flow/home_wrapper.dart';
 import 'package:flutter_app_interview/ui/pages/mec_splash_screen.dart';
+import 'package:flutter_app_interview/utils/mec_fontsizes.dart';
 import 'package:flutter_app_interview/utils/mec_route_names.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -43,7 +44,14 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(
-        fontFamily: 'Roboto'
+        fontFamily: 'Roboto',
+        textTheme: TextTheme(
+          headline6: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: MECFontSizes.SIZE_36,
+            fontFamily: 'Comfortaa'
+          )
+        )
       ),
       builder: (_, child) {
         return BlocListener<MECAuthenticationBloc, MECAuthenticationState>(

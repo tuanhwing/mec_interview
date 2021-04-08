@@ -3,9 +3,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_interview/core/mec_hardware_back_observer.dart';
+import 'package:flutter_app_interview/core/mec_navigator.dart';
 import 'package:flutter_app_interview/ui/common/mec_button.dart';
 import 'package:flutter_app_interview/ui/common/mec_circle_image.dart';
 import 'package:flutter_app_interview/ui/common/mec_single_text.dart';
+import 'package:flutter_app_interview/ui/pages/authen_flow/login/login_screen.dart';
 import 'package:flutter_app_interview/utils/mec_defines.dart';
 import 'package:flutter_app_interview/utils/mec_dimensions.dart';
 import 'package:flutter_app_interview/utils/mec_fontsizes.dart';
@@ -124,7 +126,10 @@ class _RootAuthenticationState extends State<RootAuthenticationScreen> implement
                     child: MECButton(
                       title: tr('log_in').allInCaps,
                       onPressed: () {
-
+                        MECNavigator.pushRoute(
+                          context,
+                          MaterialPageRoute(builder: (_) => LoginScreen())
+                        );
                       },
                     ),
                   ),
