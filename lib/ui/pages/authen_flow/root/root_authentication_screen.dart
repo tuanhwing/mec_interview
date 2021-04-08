@@ -8,6 +8,7 @@ import 'package:flutter_app_interview/ui/common/mec_button.dart';
 import 'package:flutter_app_interview/ui/common/mec_circle_image.dart';
 import 'package:flutter_app_interview/ui/common/mec_single_text.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/login/login_screen.dart';
+import 'package:flutter_app_interview/ui/pages/authen_flow/register/register_screen.dart';
 import 'package:flutter_app_interview/utils/mec_defines.dart';
 import 'package:flutter_app_interview/utils/mec_dimensions.dart';
 import 'package:flutter_app_interview/utils/mec_fontsizes.dart';
@@ -61,7 +62,7 @@ class _RootAuthenticationState extends State<RootAuthenticationScreen> implement
                       Expanded(
                         child: Center(
                           child: Text(
-                            tr('photo'),
+                            tr('app_name'),
                             style: TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: MECFontSizes.SIZE_48,
@@ -139,7 +140,10 @@ class _RootAuthenticationState extends State<RootAuthenticationScreen> implement
                       title: tr('register').allInCaps,
                       type: MECButtonType.dark,
                       onPressed: () {
-
+                        MECNavigator.pushRoute(
+                            context,
+                            MaterialPageRoute(builder: (_) => RegisterScreen())
+                        );
                       },
                     )
                   )

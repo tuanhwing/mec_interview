@@ -1,10 +1,15 @@
 {
-  "app_name" : "MEC",
+  "app_name" : "photo",
 
-  "photo" : "photo",
   "log_in" : "log in",
   "register" : "register",
 
   "user_name" : "user name",
-  "password" : "password"
+  "password" : "password",
+
+  "sign_up" : "sign up",
+  "sign_up_explain" : "by signing up, you agree to Photo's",
+  "term_of_service" : "term of service",
+  "and" : "and",
+  "privacy_policy" : "privacy policy"
 }

@@ -1,10 +1,15 @@
 {
-  "app_name" : "MEC",
+  "app_name" : "photo",
 
-  "photo" : "photo",
   "log_in" : "đăng nhập",
   "register" : "đăng ký",
 
   "user_name" : "tên đăng nhập",
-  "password" : "mật khẩu"
+  "password" : "mật khẩu",
+
+  "sign_up" : "đăng ký",
+  "sign_up_explain" : "bằng cách đăng ký, bạn đã đồng ý với",
+  "term_of_service" : "điều khoản",
+  "and" : "và",
+  "privacy_policy" : "chính sách bảo mật"
 }
