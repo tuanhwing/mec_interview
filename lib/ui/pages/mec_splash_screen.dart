@@ -13,7 +13,7 @@ class MECSplashScreen extends StatefulWidget {
 class _MECSplashState extends State<MECSplashScreen> {
 
   void _handle() async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 1));
     MECNavigator.pushReplacementNamed(context, MECRouteNames.AUTHENTICATION_FLOW);
   }
 

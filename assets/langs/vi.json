@@ -3,5 +3,8 @@
 
   "photo" : "photo",
   "log_in" : "đăng nhập",
-  "register" : "đăng ký"
+  "register" : "đăng ký",
+
+  "user_name" : "tên đăng nhập",
+  "password" : "mật khẩu"
 }

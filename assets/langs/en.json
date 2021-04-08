@@ -3,5 +3,8 @@
 
   "photo" : "photo",
   "log_in" : "log in",
-  "register" : "register"
+  "register" : "register",
+
+  "user_name" : "user name",
+  "password" : "password"
 }
