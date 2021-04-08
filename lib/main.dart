@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(
-
+        fontFamily: 'Roboto'
       ),
       builder: (_, child) {
         return BlocListener<MECAuthenticationBloc, MECAuthenticationState>(

@@ -4,7 +4,7 @@ import 'dart:ui';
 
 class MECDefines {
   static const String FLAGS_ASSETS = 'assets/flags/';
-  static const String ICONS_ASSETS = 'assets/icons/';
+  static const String IMAGES_ASSETS = 'assets/images/';
 
   static const String USER_INFO_KEY = "mec_user_info_key";
   static const String LAST_SELECTED_COUNTRY = "mec_last_selected_country";
