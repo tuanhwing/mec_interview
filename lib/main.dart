@@ -2,7 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_interview/bloc/authentication/mec_authentication_bloc.dart';
 import 'package:flutter_app_interview/bloc/bloc_factory.dart';
+import 'package:flutter_app_interview/ui/pages/authen_flow/authen_wrapper.dart';
+import 'package:flutter_app_interview/ui/pages/home_flow/home_wrapper.dart';
 import 'package:flutter_app_interview/ui/pages/mec_splash_screen.dart';
+import 'package:flutter_app_interview/utils/mec_route_names.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -42,7 +45,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 
       ),
-      home: MECSplashScreen(),
       builder: (_, child) {
         return BlocListener<MECAuthenticationBloc, MECAuthenticationState>(
           listener: (context, state) {
@@ -55,6 +57,11 @@ class MyApp extends StatelessWidget {
           },
           child: child,
         );
+      },
+      home: MECSplashScreen(),
+      routes: {
+        MECRouteNames.AUTHENTICATION_FLOW : (_) => AuthenWrapper(),
+        MECRouteNames.HOME_FLOW : (_) => HomeWrapper()
       },
     );
   }
