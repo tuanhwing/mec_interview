@@ -18,6 +18,11 @@
   "user_is_exists" : "tài khoản đã tồn tại",
   "success" : "thành công",
   "or" : "hoặc",
-  "incorrect" : "không đúng"
+  "incorrect" : "không đúng",
+
+  "see_more" : "xem thêm",
+  "discover" : "khám phá",
+  "whats_new_today" : "có gì mới hôm nay",
+  "browse_all" : "tất cả"
 
 }

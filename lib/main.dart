@@ -48,6 +48,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Roboto',
         textTheme: TextTheme(
+          subtitle2: TextStyle(
+            fontSize: MECFontSizes.SIZE_13,
+            fontWeight: FontWeight.w900
+          ),
           headline6: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: MECFontSizes.SIZE_36,
