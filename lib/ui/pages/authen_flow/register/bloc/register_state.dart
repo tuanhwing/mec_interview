@@ -8,7 +8,7 @@ class RegisterState extends Equatable {
   const RegisterState({
     this.status = FormzStatus.pure,
     this.email = const EmailInput.pure()
-});
+  });
 
   final EmailInput email;
   final FormzStatus status;
