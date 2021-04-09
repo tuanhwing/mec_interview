@@ -16,6 +16,8 @@
   "invalid" : "không hợp lệ",
   "password_too_weak" : "mật khẩu quá yếu",
   "user_is_exists" : "tài khoản đã tồn tại",
-  "success" : "thành công"
+  "success" : "thành công",
+  "or" : "hoặc",
+  "incorrect" : "không đúng"
 
 }

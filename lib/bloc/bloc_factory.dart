@@ -15,9 +15,11 @@ class BlocFactory {
         return MECAuthenticationBloc(authenticationRepository) as T;
 
       case LoginBloc:
-        return LoginBloc(context) as T;
+        MECAuthenticationRepository authenticationRepository = RepositoryFactory.of<MECAuthenticationRepository>();
+        return LoginBloc(context, authenticationRepository) as T;
       case RegisterBloc:
-        return RegisterBloc(context) as T;
+        MECAuthenticationRepository authenticationRepository = RepositoryFactory.of<MECAuthenticationRepository>();
+        return RegisterBloc(context, authenticationRepository) as T;
       default:
         throw('MECBlocFactory can not found $T');
     }

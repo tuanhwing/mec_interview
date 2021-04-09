@@ -5,6 +5,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_app_interview/bloc/mec_page_bloc.dart';
 import 'package:flutter_app_interview/bloc/mec_page_event.dart';
 import 'package:flutter_app_interview/core/mec_navigator.dart';
+import 'package:flutter_app_interview/core/network/mec_response.dart';
+import 'package:flutter_app_interview/repository/firebase/firebase_authenticaiton_repository.dart';
+import 'package:flutter_app_interview/repository/mec_authentication_repository.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/register/bloc/register_event.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/register/bloc/register_state.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/supports/email_input.dart';
@@ -14,7 +17,9 @@ import 'package:formz/formz.dart';
 import 'package:flutter_app_interview/core/extension/mec_string_extension.dart';
 
 class RegisterBloc extends MECPageBloc<RegisterEvent, RegisterState> {
-  RegisterBloc(BuildContext context) : super(context, const RegisterState());
+  RegisterBloc(BuildContext context, this._firebaseAuthenticationRepository) : super(context, const RegisterState());
+
+  MECAuthenticationRepository _firebaseAuthenticationRepository;
 
   @override
   Stream<RegisterState> mapEventToState(RegisterEvent event) async* {
@@ -34,33 +39,25 @@ class RegisterBloc extends MECPageBloc<RegisterEvent, RegisterState> {
   }
 
   void _registerSubmit() async {
-    pageSTC.add(MECPageLoadingEvent());//Show loading
-    try {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-          email: state.email.value,
-          password: MECDefines.DEFAULT_PASSWORD
-      );
 
+    if (!state.status.isValidated) return;
+
+    pageSTC.add(MECPageLoadingEvent());//Show loading
+    MECResponse response = await _firebaseAuthenticationRepository.register(state.email.value, MECDefines.DEFAULT_PASSWORD);
+
+    if (response.code == MECResponseCode.SUCCESS) {
       pageSTC.add(null);//Dismiss loading
       MECUtils.showNotifyDialog(
-        context,
-        message: tr('register').capitalize + " " + tr('success'),
-        yes: () {
-          MECNavigator.pop(context);
-        }
+          context,
+          message: tr('register').capitalize + " " + tr('success'),
+          yes: () {
+            MECNavigator.pop(context);
+          }
       );
+      return;
+    }
 
-    }
-    on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') {
-        pageSTC.add(EOCPageErrorEvent(message: tr('password_too_weak').capitalize + "!"));
-      } else if (e.code == 'email-already-in-use') {
-        pageSTC.add(EOCPageErrorEvent(message: tr('user_is_exists').capitalize + "!"));
-      }
-    } catch (e) {
-      pageSTC.add(EOCPageErrorEvent(message: tr('something_went_wrong').capitalize + "!"));
-      print(e);
-    }
+    pageSTC.add(EOCPageErrorEvent(message: response.message));
   }
 
 }

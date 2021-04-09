@@ -12,7 +12,10 @@ class DataInput extends FormzInput<String, DataInputError> {
 
   @override
   DataInputError validator(String value) {
-    return value?.isEmpty == true ? DataInputError.empty : null;
+    if (value == null || value.trim().isEmpty) {
+      return DataInputError.empty;
+    }
+    return null;
   }
 
 }
