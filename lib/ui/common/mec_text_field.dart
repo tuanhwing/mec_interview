@@ -6,10 +6,12 @@ import 'package:flutter_app_interview/utils/mec_dimensions.dart';
 import 'package:flutter_app_interview/utils/mec_fontsizes.dart';
 
 class MECTextField extends StatelessWidget {
-  MECTextField({this.onChanged, this.obscureText = false, this.hintText = ""});
+  MECTextField({this.onChanged, this.obscureText = false, this.hintText = "", this.errorString});
   final Function(String) onChanged;
   final bool obscureText;
   final String hintText;
+  final String errorString;
+
   @override
   Widget build(BuildContext context) {
     return DefaultTextStyle(
@@ -17,28 +19,41 @@ class MECTextField extends StatelessWidget {
         fontSize: MECFontSizes.SIZE_15,
         fontWeight: FontWeight.w400
       ),
-      child: SizedBox(
-        width: double.infinity,
-        height: 52.0,
-        child: TextField(
-          obscureText: obscureText,
-          decoration: InputDecoration(
-            hintText: hintText,
-            border: OutlineInputBorder(
-                borderSide: BorderSide(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: double.infinity,
+            height: 52.0,
+            child: TextField(
+              onChanged: onChanged,
+              obscureText: obscureText,
+              decoration: InputDecoration(
+                hintText: hintText,
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: MECColors.black,
+                        width: MECDimensions.DIMENSION_2
+                    )
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
                     color: MECColors.black,
                     width: MECDimensions.DIMENSION_2
+                  )
                 )
+              ),
+              cursorColor: MECColors.black,
             ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: MECColors.black,
-                width: MECDimensions.DIMENSION_2
-              )
-            )
           ),
-          cursorColor: MECColors.black,
-        ),
+          errorString != null ? Text(
+            errorString,
+            style: TextStyle(
+              color: MECColors.red,
+              fontSize: MECFontSizes.SIZE_13
+            ),
+          ) : SizedBox()
+        ],
       ),
     );
   }
