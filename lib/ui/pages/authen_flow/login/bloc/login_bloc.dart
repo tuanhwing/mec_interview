@@ -1,6 +1,4 @@
 
-
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_app_interview/bloc/authentication/mec_authentication_bloc.dart';
 import 'package:flutter_app_interview/bloc/authentication/mec_authentication_event.dart';

@@ -43,7 +43,7 @@ class FirebaseAuthenticationRepository extends MECAuthenticationRepository {
           photoURL: userCredential.user.photoURL,
         )
       );
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException catch (_) {
       return MECResponse<MECUserModel>(
         code: MECResponseCode.SYSTEM_ERROR,
         message: tr('user_name').capitalize + " " + tr('or') + " " + tr('password') + " " + tr('incorrect') + "!"
@@ -54,7 +54,7 @@ class FirebaseAuthenticationRepository extends MECAuthenticationRepository {
 
   @override
   Future<MECResponse> logout() async {
-
+    return MECResponse(code: MECResponseCode.SUCCESS);
   }
 
   @override
