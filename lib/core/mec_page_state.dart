@@ -6,7 +6,7 @@ import 'package:flutter_app_interview/bloc/mec_page_bloc.dart';
 import 'package:flutter_app_interview/ui/common/mec_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-abstract class MECPageState<Bloc extends MECPageBloc, Stateful extends StatefulWidget> extends State<Stateful> {
+abstract class MECPageState<Bloc extends MECPageBloc, Stateful extends StatefulWidget> extends State<Stateful> with AutomaticKeepAliveClientMixin {
   Bloc _bloc;
 
   Bloc get bloc => _bloc;
@@ -16,6 +16,9 @@ abstract class MECPageState<Bloc extends MECPageBloc, Stateful extends StatefulW
   void _onErrorTap() {
     _bloc.pageSTC.add(null);
   }
+
+  @override
+  bool get wantKeepAlive => false;
 
   @override
   void initState() {
@@ -35,6 +38,7 @@ abstract class MECPageState<Bloc extends MECPageBloc, Stateful extends StatefulW
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocProvider<Bloc>.value(
       value: bloc,
       child: MECPage(

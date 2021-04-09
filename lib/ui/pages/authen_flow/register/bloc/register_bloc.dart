@@ -1,12 +1,10 @@
 
 import 'package:easy_localization/easy_localization.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_app_interview/bloc/mec_page_bloc.dart';
 import 'package:flutter_app_interview/bloc/mec_page_event.dart';
 import 'package:flutter_app_interview/core/mec_navigator.dart';
 import 'package:flutter_app_interview/core/network/mec_response.dart';
-import 'package:flutter_app_interview/repository/firebase/firebase_authenticaiton_repository.dart';
 import 'package:flutter_app_interview/repository/mec_authentication_repository.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/register/bloc/register_event.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/register/bloc/register_state.dart';
