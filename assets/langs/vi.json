@@ -11,5 +11,11 @@
   "sign_up_explain" : "bằng cách đăng ký, bạn đã đồng ý với",
   "term_of_service" : "điều khoản",
   "and" : "và",
-  "privacy_policy" : "chính sách bảo mật"
+  "privacy_policy" : "chính sách bảo mật",
+
+  "invalid" : "không hợp lệ",
+  "password_too_weak" : "mật khẩu quá yếu",
+  "user_is_exists" : "tài khoản đã tồn tại",
+  "success" : "thành công"
+
 }

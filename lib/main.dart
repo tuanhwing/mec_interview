@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_interview/bloc/authentication/mec_authentication_bloc.dart';
 import 'package:flutter_app_interview/bloc/bloc_factory.dart';
@@ -19,6 +20,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPreferences.getInstance();
   await EasyLocalization.ensureInitialized();
+  await Firebase.initializeApp();
 
   runApp(BlocProvider(
     create: (_) => BlocFactory.of<MECAuthenticationBloc>(),
@@ -58,8 +60,10 @@ class MyApp extends StatelessWidget {
           listener: (context, state) {
             switch(state.status) {
               case MECAuthenticationStatus.authenticated:
+                _navigator.pushReplacementNamed(MECRouteNames.HOME_FLOW);
                 break;
               default:
+                _navigator.pushReplacementNamed(MECRouteNames.AUTHENTICATION_FLOW);
                 break;
             }
           },

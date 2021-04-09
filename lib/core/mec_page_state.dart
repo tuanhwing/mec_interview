@@ -4,6 +4,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_app_interview/bloc/bloc_factory.dart';
 import 'package:flutter_app_interview/bloc/mec_page_bloc.dart';
 import 'package:flutter_app_interview/ui/common/mec_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class MECPageState<Bloc extends MECPageBloc, Stateful extends StatefulWidget> extends State<Stateful> {
   Bloc _bloc;
@@ -34,10 +35,13 @@ abstract class MECPageState<Bloc extends MECPageBloc, Stateful extends StatefulW
 
   @override
   Widget build(BuildContext context) {
-    return MECPage(
-      onErrorTap: _onErrorTap,
-      stream: _bloc.pageStream,
-      body: content,
+    return BlocProvider<Bloc>.value(
+      value: bloc,
+      child: MECPage(
+        onErrorTap: _onErrorTap,
+        stream: _bloc.pageStream,
+        body: content,
+      ),
     );
   }
 

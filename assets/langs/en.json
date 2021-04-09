@@ -11,5 +11,11 @@
   "sign_up_explain" : "by signing up, you agree to Photo's",
   "term_of_service" : "term of service",
   "and" : "and",
-  "privacy_policy" : "privacy policy"
+  "privacy_policy" : "privacy policy",
+
+  "invalid" : "invalid",
+  "password_too_weak" : "the password provided is too weak",
+  "user_is_exists" : "the account already exists for that email",
+  "something_went_wrong" : "something went wrong",
+  "success" : "succeed"
 }

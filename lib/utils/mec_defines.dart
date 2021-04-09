@@ -15,6 +15,8 @@ class MECDefines {
 
   static const String IS_READ_INTRO_KEY = "mec_read_intro_key";
 
+  static const String DEFAULT_PASSWORD = "Abc123#@";
+
   static const locales = [
     Locale('vi', 'VN'),
     Locale('en', 'US'),
