@@ -19,5 +19,10 @@
   "something_went_wrong" : "something went wrong",
   "success" : "succeed",
   "or" : "or",
-  "incorrect" : "incorrect"
+  "incorrect" : "incorrect",
+
+  "see_more" : "see more",
+  "discover" : "discover",
+  "whats_new_today" : "what's new today",
+  "browse_all" : "browse all"
 }

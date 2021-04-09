@@ -104,7 +104,6 @@ class MECPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFecf0f1),
       body: Stack(
         children: [
           body,

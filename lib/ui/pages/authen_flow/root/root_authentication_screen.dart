@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_interview/core/mec_hardware_back_observer.dart';
 import 'package:flutter_app_interview/core/mec_navigator.dart';
 import 'package:flutter_app_interview/ui/common/mec_button.dart';
+import 'package:flutter_app_interview/ui/common/mec_card_info_widget.dart';
 import 'package:flutter_app_interview/ui/common/mec_circle_image.dart';
 import 'package:flutter_app_interview/ui/common/mec_single_text.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/login/login_screen.dart';
@@ -76,37 +77,12 @@ class _RootAuthenticationState extends State<RootAuthenticationScreen> implement
                           vertical: 4*MECDimensions.DIMENSION_5,
                           horizontal: 2*MECDimensions.DIMENSION_8
                         ),
-                        child: Row(
-                          children: [
-                            MECCircleImage(
-                              url: MECMockUp.AVATAR_IMAGE,
-                              size: 4*MECDimensions.DIMENSION_6,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: MECDimensions.DIMENSION_8),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  MECSingleText(
-                                    'Pawel Czerwinski',
-                                    style: TextStyle(
-                                      fontSize: MECFontSizes.SIZE_13,
-                                      fontWeight: FontWeight.w700
-                                    ),
-                                  ),
-                                  MECSingleText(
-                                    '@pawel_czerwinski',
-                                    style: TextStyle(
-                                        fontSize: MECFontSizes.SIZE_11,
-                                        fontWeight: FontWeight.w400
-                                    ),
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
+                        child: MECCardInfoWidget(
+                            imageURL: MECMockUp.AVATAR_IMAGE,
+                            title: 'Pawel Czerwinski',
+                            subTitle: '@pawel_czerwinski',
+                        )
+                      ),
                     ],
                   ),
                 )
