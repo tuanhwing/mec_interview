@@ -24,5 +24,7 @@
   "see_more" : "see more",
   "discover" : "discover",
   "whats_new_today" : "what's new today",
-  "browse_all" : "browse all"
+  "browse_all" : "browse all",
+
+  "sign_out" : "sign out"
 }

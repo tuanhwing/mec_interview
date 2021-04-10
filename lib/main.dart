@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_app_interview/bloc/authentication/mec_authentication_bloc.dart';
 import 'package:flutter_app_interview/bloc/bloc_factory.dart';
 import 'package:flutter_app_interview/ui/pages/authen_flow/authen_wrapper.dart';
@@ -13,7 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'bloc/authentication/mec_authentication_state.dart';
 import 'core/config/mec_config.dart';
-import 'core/enum/mec_authenticaiton_status.dart';
+import 'core/enum/mec_authentication_status.dart';
 
 void main() async {
 
@@ -21,6 +22,11 @@ void main() async {
   await SharedPreferences.getInstance();
   await EasyLocalization.ensureInitialized();
   await Firebase.initializeApp();
+
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
 
   runApp(BlocProvider(
     create: (_) => BlocFactory.of<MECAuthenticationBloc>(),
