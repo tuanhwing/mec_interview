@@ -54,6 +54,8 @@ class FirebaseAuthenticationRepository extends MECAuthenticationRepository {
 
   @override
   Future<MECResponse> logout() async {
+
+    await FirebaseAuth.instance.signOut();
     return MECResponse(code: MECResponseCode.SUCCESS);
   }
 

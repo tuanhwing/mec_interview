@@ -6,6 +6,7 @@ import 'package:flutter_app_interview/core/mec_hardware_back_observer.dart';
 import 'package:flutter_app_interview/core/mec_navigator.dart';
 import 'package:flutter_app_interview/core/mec_page_state.dart';
 import 'package:flutter_app_interview/ui/pages/home_flow/add/home_add_screen.dart';
+import 'package:flutter_app_interview/ui/pages/home_flow/profile/home_profile_screen.dart';
 import 'package:flutter_app_interview/ui/pages/home_flow/root/bloc/home_bloc.dart';
 import 'package:flutter_app_interview/ui/pages/home_flow/root/bloc/home_event.dart';
 import 'package:flutter_app_interview/ui/pages/home_flow/root/bloc/home_state.dart';
@@ -27,7 +28,7 @@ class _RootHomeState extends MECPageState<HomeBloc, RootHomeScreen> with SingleT
     Center(child: Text('2'),),
     HomeAddScreen(),
     Center(child: Text('4'),),
-    Center(child: Text('5'),),
+    HomeProfileScreen(),
   ];
 
   @override

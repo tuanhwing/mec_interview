@@ -1,7 +1,7 @@
 
 
 import 'package:equatable/equatable.dart';
-import 'package:flutter_app_interview/core/enum/mec_authenticaiton_status.dart';
+import 'package:flutter_app_interview/core/enum/mec_authentication_status.dart';
 import 'package:flutter_app_interview/models/mec_user_model.dart';
 
 abstract class MECAuthenticationEvent extends Equatable {

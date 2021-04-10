@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'package:flutter_app_interview/bloc/authentication/mec_authentication_event.dart';
 import 'package:flutter_app_interview/bloc/authentication/mec_authentication_state.dart';
-import 'package:flutter_app_interview/core/enum/mec_authenticaiton_status.dart';
+import 'package:flutter_app_interview/core/enum/mec_authentication_status.dart';
 import 'package:flutter_app_interview/core/network/mec_response.dart';
 import 'package:flutter_app_interview/models/mec_user_model.dart';
 import 'package:flutter_app_interview/repository/mec_authentication_repository.dart';
