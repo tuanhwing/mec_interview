@@ -30,15 +30,15 @@ class MECTextField extends StatelessWidget {
               obscureText: obscureText,
               decoration: InputDecoration(
                 hintText: hintText,
-                border: OutlineInputBorder(
+                enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                        color: MECColors.black,
-                        width: MECDimensions.DIMENSION_2
+                        color: errorString != null ? MECColors.red : MECColors.black,
+                        width: MECDimensions.DIMENSION_2/2
                     )
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: MECColors.black,
+                    color: errorString != null ? MECColors.red : MECColors.black,
                     width: MECDimensions.DIMENSION_2
                   )
                 )
@@ -46,11 +46,14 @@ class MECTextField extends StatelessWidget {
               cursorColor: MECColors.black,
             ),
           ),
-          errorString != null ? Text(
-            errorString,
-            style: TextStyle(
-              color: MECColors.red,
-              fontSize: MECFontSizes.SIZE_13
+          errorString != null ? Padding(
+            padding: EdgeInsets.only(top: MECDimensions.DIMENSION_2),
+            child: Text(
+              errorString,
+              style: TextStyle(
+                color: MECColors.red,
+                fontSize: MECFontSizes.SIZE_13
+              ),
             ),
           ) : SizedBox()
         ],

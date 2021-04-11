@@ -88,12 +88,12 @@ class MECPage extends StatelessWidget {
     if (event != null) {
       if (event is MECPageLoadingEvent) {
         return Container(
-          color: Theme.of(context).colorScheme.surface.withOpacity(0.5),
+          color: Theme.of(context).colorScheme.primaryVariant.withOpacity(0.1),
           child: _loadingWidget(context: context),
         );
       } else if (event is EOCPageErrorEvent) {
         return Container(
-            color: Theme.of(context).colorScheme.surface.withOpacity(0.5),
+            color: Theme.of(context).colorScheme.primaryVariant.withOpacity(0.1),
             child: _errorWidget(event.message, context: context)
         );
       }

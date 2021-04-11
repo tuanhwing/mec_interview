@@ -18,12 +18,11 @@ abstract class MECPageState<Bloc extends MECPageBloc, Stateful extends StatefulW
   }
 
   @override
-  bool get wantKeepAlive => false;
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {
     super.initState();
-
     _bloc = BlocFactory.of<Bloc>(context: context);
     SchedulerBinding.instance.addPostFrameCallback((Duration duration) {
       onPostFrame();

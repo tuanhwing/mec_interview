@@ -37,7 +37,7 @@ class LoginBloc extends MECPageBloc<LoginEvent, LoginState> {
     final email = EmailInput.dirty(value: event.email);
     return state.copyWith(
       email: email,
-      status: Formz.validate([state.email, email]),
+      status: Formz.validate([email, state.password]),
     );
   }
 
@@ -45,7 +45,7 @@ class LoginBloc extends MECPageBloc<LoginEvent, LoginState> {
     final password = DataInput.dirty(value: event.password);
     return state.copyWith(
       password: password,
-      status: Formz.validate([state.password, password]),
+      status: Formz.validate([password, state.email]),
     );
   }
 

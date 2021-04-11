@@ -46,7 +46,7 @@ class FirebaseAuthenticationRepository extends MECAuthenticationRepository {
     } on FirebaseAuthException catch (_) {
       return MECResponse<MECUserModel>(
         code: MECResponseCode.SYSTEM_ERROR,
-        message: tr('user_name').capitalize + " " + tr('or') + " " + tr('password') + " " + tr('incorrect') + "!"
+        message: tr('email').capitalize + " " + tr('or') + " " + tr('password') + " " + tr('incorrect') + "!"
       );
 
     }

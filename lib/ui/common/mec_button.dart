@@ -28,7 +28,7 @@ class MECButton extends StatelessWidget {
           color: type == MECButtonType.light ? MECColors.white : MECColors.black,
           borderRadius: BorderRadius.circular(MECDimensions.DIMENSION_6),
           border: Border.all(
-            color: type == MECButtonType.light ? MECColors.black : MECColors.white,
+            color: MECColors.black,
             width: MECDimensions.DIMENSION_2
           )
         ),

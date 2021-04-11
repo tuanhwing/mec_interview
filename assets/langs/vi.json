@@ -4,8 +4,9 @@
   "log_in" : "đăng nhập",
   "register" : "đăng ký",
 
-  "user_name" : "tên đăng nhập",
+  "email" : "email",
   "password" : "mật khẩu",
+  "confirm_password" : "xác nhận mật khẩu",
 
   "sign_up" : "đăng ký",
   "sign_up_explain" : "bằng cách đăng ký, bạn đã đồng ý với",
@@ -25,6 +26,9 @@
   "whats_new_today" : "có gì mới hôm nay",
   "browse_all" : "tất cả",
 
-  "sign_out" : "đăng xuất"
+  "sign_out" : "đăng xuất",
+  "notify" : "thông báo",
+  "do_not_match" : "không trùng khớp"
+
 
 }

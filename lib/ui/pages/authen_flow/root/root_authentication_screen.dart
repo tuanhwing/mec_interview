@@ -90,10 +90,9 @@ class _RootAuthenticationState extends State<RootAuthenticationScreen> implement
           SafeArea(
             top: false,
             child: Padding(
-              padding: EdgeInsets.only(
-                top: 4*MECDimensions.DIMENSION_5,
-                left: 2*MECDimensions.DIMENSION_8,
-                right: 2*MECDimensions.DIMENSION_8,
+              padding: EdgeInsets.symmetric(
+                vertical: 4*MECDimensions.DIMENSION_5,
+                horizontal: 2*MECDimensions.DIMENSION_8,
               ),
               child: Row(
                 children: [

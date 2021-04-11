@@ -4,8 +4,9 @@
   "log_in" : "log in",
   "register" : "register",
 
-  "user_name" : "user name",
+  "email" : "email",
   "password" : "password",
+  "confirm_password" : "confirm password",
 
   "sign_up" : "sign up",
   "sign_up_explain" : "by signing up, you agree to Photo's",
@@ -26,5 +27,7 @@
   "whats_new_today" : "what's new today",
   "browse_all" : "browse all",
 
-  "sign_out" : "sign out"
+  "sign_out" : "sign out",
+  "notify" : "thông báo",
+  "do_not_match" : "don't match"
 }
