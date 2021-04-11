@@ -14,12 +14,7 @@ This project is a starting point for a Flutter application.
 - Preserving state between tab view pages.
 - Design pattern (`Observer`, `Singleton`, `Factory`, `Adapter`, ...)
 
-![Screenshot](https://i.imgur.com/SvMyVyT.png)
-![Screenshot](https://i.imgur.com/f85BEeN.png)
-![Screenshot](https://i.imgur.com/3VTPZ3b.png)
-![Screenshot](https://i.imgur.com/6s3rwcP.png)
-![Screenshot](https://i.imgur.com/pvuRwyN.png)
-![Screenshot](https://i.imgur.com/pvuRwyN.png)
-![Screenshot](https://i.imgur.com/nBhIEXk.png)
+Attempt | #1 | #2 | #3 | #4 | #5 | #6
+--- | --- | --- | --- |--- |--- |---
+Screens | ![Screenshot](https://i.imgur.com/SvMyVyT.png) | ![Screenshot](https://i.imgur.com/f85BEeN.png) | ![Screenshot](https://i.imgur.com/3VTPZ3b.png) | ![Screenshot](https://i.imgur.com/6s3rwcP.png) | ![Screenshot](https://i.imgur.com/pvuRwyN.png) | ![Screenshot](https://i.imgur.com/nBhIEXk.png)
 
-****
